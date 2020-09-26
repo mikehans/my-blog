@@ -25,26 +25,34 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Menu />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
+    <div className="wrapper">
+      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Menu /> */}
+      <header className="mainHeader">
+        <h1> Site Heading</h1>
+        <nav>
+          <span>Home</span>
+          <span>About</span>
+          <span>Blog</span>
+          <span>Contact Us</span>
+        </nav>
+      </header>
+
+      <div className="container">
+        <main className="content">{children}</main>
+        <aside class="additionalNav">
+                <nav class="tags">Tags</nav>
+                <nav class="archive">Archive</nav>
+			  </aside>
+        <section class="leftNonContentSection"></section>
+      </div>
+
+      <footer className="mainFooter">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+      </footer>
+    </div>
   )
 }
 
