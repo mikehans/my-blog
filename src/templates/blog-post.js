@@ -24,6 +24,7 @@ export const postQuery = graphql`
                 title
                 author
                 date
+                tags
             }
         }
     }
