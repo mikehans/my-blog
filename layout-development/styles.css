@@ -1,0 +1,102 @@
+body{
+	margin: 0;
+	font-size: 10pt;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+	display:flex;
+	flex-direction: column;
+	background-color: darkkhaki;
+}
+
+.mainHeader {
+	flex-basis: 3em;
+	min-height: 3em;
+
+	background-color: crimson;
+	font-size: 15pt;
+	padding: 5px;
+}
+
+.mainFooter {
+	flex-basis: 2em;
+	/* min-height:2em; */
+	flex-shrink: 0;
+	margin-top: auto;
+
+	background-color: darkslateblue;
+	font-size: 20pt;
+	padding: 5px;
+}
+
+.container{
+	display: flex;
+	align-items: stretch;
+
+	/* GOTCHA! */
+	/* flex-basis worked for all except IE11. 
+	   min-height works for IE11, Edge, Firefox  */
+	/* flex-basis: calc(100vh - ((3em * 1.5) + (2em * 2) + 10px + 10px)); */
+	min-height: calc(100vh - ((3em * 1.5) + (2em * 2) + 10px + 10px));
+
+	background-color:  violet;
+}
+
+.additionalNav {
+	background-color: mediumseagreen;
+	min-width: 150px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tags {
+    height: 50%;
+}
+
+.archive {
+    height: 50%;
+}
+
+.leftNonContentSection {
+	min-width: 150px;
+    padding: 5px;
+}
+
+.content {
+	flex-grow:1;
+	background-color: sandybrown;
+	padding: 5px;
+}
+
+@media (min-width: 768px){
+	.content{
+		order: 0;
+	}
+}
+@media (max-width: 767px){
+	.container{
+		flex-direction: column;
+	}
+
+    .leftNonContentSection {
+        display: none;
+    }
+
+	main {
+		order: 0;
+		flex-grow: 1;
+	}
+}
+
+/* @supports(display: flex){
+	.wrapper{
+		height: auto;
+		min-height: 100vh;
+	}
+	main, aside{
+		height: auto;
+		min-height: 70vh;
+	}
+} */
