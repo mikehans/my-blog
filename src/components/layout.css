@@ -605,12 +605,19 @@ pre tt:after {
 }
 
 .mainHeader {
-	flex-basis: 3em;
+	/* flex-basis: 3em; */
 	min-height: 3em;
 
 	background-color: crimson;
 	font-size: 15pt;
 	padding: 5px;
+}
+
+.mainNav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+
 }
 
 .mainFooter {

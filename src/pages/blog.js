@@ -2,23 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Tags from "../components/tags"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
 function BlogPage ({data}) {
-    let edges = data.allMarkdownRemark.edges;
-    
-    let allTags = [];
-    edges.forEach(ele => {
-        const t = ele.node.frontmatter.tags;
-        t.forEach(e => allTags.push(e));
-    });
-
-    allTags.sort();
-
-    let distinctTags = new Set(allTags);
-
+ 
     return (
         <Layout>
             <h1>Latest Posts</h1>
@@ -34,9 +22,6 @@ function BlogPage ({data}) {
                     <hr />
                 </div>
             ))}
-
-            <h1>Tags</h1>
-            <Tags list={distinctTags} />
 
         </Layout>
     )
