@@ -7,44 +7,36 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-import Menu from './menu'
+import SideNav from './sideNav'
+import Footer from './footer'
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+  const data = graphql`
+    query SiteBriefQuery {
       site {
         siteMetadata {
           title
         }
       }
     }
-  `)
+  `
 
   return (
-    <>
+    <div className="wrapper">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Menu />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+
+      <div className="container">
+        <main className="content">{children}</main>
+        <SideNav />
+        <section className="leftNonContentSection"></section>
       </div>
-    </>
+
+      <Footer />
+    </div>
   )
 }
 
