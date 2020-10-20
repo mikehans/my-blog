@@ -29,7 +29,7 @@ function BlogPage ({data}) {
 
 export const pageQuery = graphql`
     query BlogIndexQuery {
-        allMarkdownRemark(sort: {fields: frontmatter___date}) {
+        allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/posts/**"}}, sort: {fields: frontmatter___date, order: DESC}) {
             edges {
               node {
                 id
@@ -38,7 +38,6 @@ export const pageQuery = graphql`
                   date
                   path
                   title
-                  tags
                 }
               }
             }
