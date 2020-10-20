@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -15,28 +15,35 @@ import SideNav from './sideNav'
 import Footer from './footer'
 
 const Layout = ({ children }) => {
-  const data = graphql`
-    query SiteBriefQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `
+
 
   return (
-    <div className="wrapper">
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-
-      <div className="container">
-        <main className="content">{children}</main>
-        <SideNav />
-        <section className="leftNonContentSection"></section>
-      </div>
-
-      <Footer />
-    </div>
+    <StaticQuery 
+      query={graphql `
+        query SiteBriefQuery {
+          site {
+            siteMetadata {
+              title
+              description
+              author
+            }
+          }
+        }
+      `}
+      render={data => (
+        <div className="wrapper">
+          <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+    
+          <div className="container">
+            <main className="content">{children}</main>
+            <SideNav />
+            <section className="leftNonContentSection"></section>
+          </div>
+    
+          <Footer />
+        </div>
+      )}
+    />
   )
 }
 

@@ -7,8 +7,7 @@ export default function Menu() {
         <nav className="mainNav">
             <ul>
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/services">Services</Link></li>
+                <li><Link to="/contact-me">Contact Me</Link></li>
                 <li><Link to="/blog">Blog</Link></li>
             </ul>
         </nav>
