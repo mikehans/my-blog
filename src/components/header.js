@@ -6,7 +6,7 @@ import Menu from './menu'
 const Header = ({ siteTitle }) => (
   <header className="mainHeader">
     <h1>
-      <Link to="/">
+      <Link className="title" to="/">
         {siteTitle}
       </Link>
     </h1>

@@ -1,6 +1,6 @@
 ---
 path: "/blog/pl-200"
-date: "25 SEP 2020"
+date: "2020-09-20"
 title: "PL-200 Power Platform Functional Consultant"
 author: "Mike Hansford"
 tags:
