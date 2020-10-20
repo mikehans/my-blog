@@ -1,6 +1,6 @@
 ---
 path: "/blog/why-power-platform"
-date: "25 SEP 2020"
+date: "2020-10-01"
 title: "Why Power Platform?"
 author: "Mike Hansford"
 tags:
