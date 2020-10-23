@@ -26,13 +26,16 @@ const Layout = ({ children }) => {
               title
               description
               author
+              subtitle
             }
           }
         }
       `}
       render={data => (
         <div className="wrapper">
-          <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+          <Header 
+            siteTitle={data.site.siteMetadata?.title || `Title`}
+            subTitle={data.site.siteMetadata?.subtitle || `Subtitle` } />
     
           <div className="container">
             <main className="content">{children}</main>
