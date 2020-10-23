@@ -3,22 +3,20 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 // import Image from "../components/image"
-// import SEO from "../components/seo"
+import SEO from "../components/seo"
 
 function BlogPage ({data}) {
  
     return (
         <Layout>
+            <SEO title="Blog" />
             <h2>Latest Posts</h2>
             {data.allMarkdownRemark.edges.map(post => (
                 <div key={post.node.id}>
                     <h3>{post.node.frontmatter.title}</h3>
-                    <small>Posted by {post.node.frontmatter.author} on {post.node.frontmatter.date}</small>
+                    <p className="blogByline">Posted by {post.node.frontmatter.author} on {post.node.frontmatter.date}</p>
                     <br />
-                    <br />
-                    <Link to={post.node.frontmatter.path}>Read more</Link>
-                    <br />
-                    <br />
+                    <p className="blogReadMore"><Link to={post.node.frontmatter.path}>Read more</Link></p>
                     <hr />
                 </div>
             ))}
