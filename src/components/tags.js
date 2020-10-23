@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
-
+import './tags.css';
 
 export default function Tags () {
     const listItems = (d) => {
@@ -52,10 +52,12 @@ export default function Tags () {
                 }            
             `}
             render={ data => (
-                <nav>
+                <nav className="tags">
                     <ul>
                         {listItems(data).map((item, index) => {
-                            return <li key={index}>{item.tag}</li>
+                            return <li className="tag" key={index}>
+                                {item.tag}
+                            </li>
                         })}
                     </ul>
                 </nav>

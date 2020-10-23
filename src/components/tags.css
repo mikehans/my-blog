@@ -1,0 +1,19 @@
+.tags {
+    border: 1px solid black;
+    border-radius: 5px;
+    background: radial-gradient(circle, rgba(144,224,239,1) 0%, rgba(0,119,182,1) 100%);
+  }
+
+.tags ul {
+    list-style-type: none;
+    
+}
+
+.tag {
+    padding: 4px;
+    /* border: 1px solid blue;
+    border-radius: 2px; */
+    margin: 4px;
+    color: white;
+    font-size: 14px;
+}
