@@ -9,7 +9,7 @@ function BlogPage ({data}) {
  
     return (
         <Layout>
-            <h1>Latest Posts</h1>
+            <h2>Latest Posts</h2>
             {data.allMarkdownRemark.edges.map(post => (
                 <div key={post.node.id}>
                     <h3>{post.node.frontmatter.title}</h3>

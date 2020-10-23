@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi I'm Mike</h1>
+    <h2>Hi I'm Mike</h2>
     <p>I'm a software developer with diverse experience across Microsoft SharePoint, Microsoft Office
         and general web development.</p>
 
