@@ -3,13 +3,14 @@ import PropTypes from "prop-types"
 import React from "react"
 import Menu from './menu'
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, subTitle }) => (
   <header className="mainHeader">
     <h1>
       <Link className="title" to="/">
         {siteTitle}
       </Link>
     </h1>
+    <p className="subTitle">{subTitle}</p>
     <Menu />
   </header>
 )

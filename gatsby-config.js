@@ -3,6 +3,7 @@ module.exports = {
     title: `Mike Hansford`,
     description: `Mike Hansford's software development blog.`,
     author: `Mike Hansford`,
+    subtitle: `Web development, Microsoft 365, Power Platform`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

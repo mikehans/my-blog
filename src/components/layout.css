@@ -72,6 +72,11 @@ pre {
   text-decoration: none;
 }
 
+.mainHeader .subTitle {
+  /* font-variant: small-caps; */
+  font-weight: 600;
+}
+
 .mainNav {
   margin-top: 4px;
   margin-bottom: 4px;
