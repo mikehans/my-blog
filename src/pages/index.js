@@ -17,12 +17,10 @@ const IndexPage = () => (
     to do with the periodic glut in vegetables. My last go at radish pickles failed miserably, though I'm sure the
     compost loved it.</p>
 
-    <p>I'm an enthusiastic hack at woodwork and electronics. I'm trying to figure out how to make better
+    <p>I'm something of a gardener, woodworker and electronics hack. I'm trying to figure out how to make better
         use of my Raspberry Pi and am trying to build a moisture monitoring system for my garden with my Arduino gear.</p>
     
-    <p>I blog about web development, Microsoft Power Platform and Microsoft 365 though I may touch other topics of interest. </p>
-    
-    <p>I'm something of a gardener, woodworker and electronics hack.</p>
+    <p>I blog about web development, Microsoft Power Platform and Microsoft 365 though I'll likely touch on other topics of interest. </p>
     
     <p>This site is defintely a work in progress too. It's been rather a while since I designed a website from scratch, 
       having worked predominantly on established websites.
