@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="mainFooter">
         © {new Date().getFullYear()}, Mike Hansford. Built with
         {` `}
-        <a href="https://www.gatsbyjs.com" target="_blank">Gatsby</a>
+        <a href="https://www.gatsbyjs.com" target="_blank" rel="noreferrer">Gatsby</a>
     </footer>
     )
 }
