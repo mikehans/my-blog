@@ -4,4 +4,10 @@
 --cerulean-crayola: #00b4d8ff;
 --sky-blue-crayola: #90e0efff;
 --powder-blue: #caf0f8ff;
+
+--theme-dark2: var(--navy-blue);
+--theme-dark1: var(--star-command-blue);
+--theme-mid: var(--cerulean-crayola);
+--theme-light1: var(--sky-blue-crayola);
+--theme-light2: var(--powder-blue);
 }
