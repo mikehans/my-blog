@@ -20,7 +20,6 @@ const IndexPage = () => (
 
     <p>I'm something of a gardener, woodworker and electronics hack. I'm trying to figure out how to make better
         use of my Raspberry Pi and am trying to build a moisture monitoring system for my garden with my Arduino gear.</p>
-    
     <p>I blog about web development, Microsoft Power Platform and Microsoft 365 though I'll likely touch on other topics of interest. </p>
     
     <p>This site is defintely a work in progress too. It's somewhat bare-bones right now. 
@@ -29,6 +28,9 @@ const IndexPage = () => (
       This site is being built (presently) in Gatsby and hosted on Netlify. 
       I have a lot to learn and it should be a lot of fun.
     </p>
+
+    <p>There is also an old blog of mine at https://mikehansford.wordpress.com/ that I kept as part of the Innovation and 
+      Entrepreneurship subject I took in 2011 as part of my Masters in Information Systems.</p>
   </Layout>
 )
 
