@@ -18,12 +18,12 @@ SharePoint Framework requires NodeJS 10.x. In fact, it won't work on a more rece
 ### Setting up SharePoint Framework in WSL2
 #### Assumptions
 First of all, some assumptions... I'm assuming you have the already have the following set up:
-* WSL2
-* Ubuntu running in WSL2
-* nvm installed
-* Node 10.x LTS installed in nvm and have switched to it
-* Yeoman and @microsoft/generator-sharepoint are installed globally through npm
-* While you're supposed to install Gulp globally, you don't need to and there are some good reasons not to. 
+* <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">WSL2</a>
+* <a href="https://www.microsoft.com/en-us/p/ubuntu-2004-lts/9n6svws3rx71?activetab=pivot:overviewtab" target="_blank">Ubuntu running in WSL2</a>
+* <a href="https://github.com/nvm-sh/nvm" target="_blank">nvm</a> installed
+* Node 10.x LTS installed in nvm (```nvm install --lts=dubnium```) and have switched to it (```nvm use lts/dubnium```)
+* <a href="https://www.npmjs.com/package/yo" target="_blank">Yeoman</a> and <a href="https://www.npmjs.com/package/@microsoft/generator-sharepoint" target="_blank">@microsoft/generator-sharepoint</a> are installed globally through npm (```npm install -g yo @microsoft/generator-sharepoint```)
+* While you're supposed to install <a href="https://www.npmjs.com/package/gulp" target="_blank">Gulp</a> globally, you don't need to and there are some good reasons not to. 
     * Instead of typing  ```gulp serve``` as you do when Gulp is installed globally, you can type ```npx gulp serve``` or add it to a start script in your package.json and type ```npm start```. I recommend the latter.
 
 #### How to set it up
@@ -40,4 +40,4 @@ The self-signed certificate will be found in ```~/.gcb-serve-data```. You need t
 1. The certificate is called _'ASP .NET Core HTTPS development certificate'_
 
 ### YMMV
-So far, it's working fine for me. The only issue I had was forgetting to ensure my Node version before compiling. I ended up with a nasty and confusing looking build error. So be sure you're running Node 10 by typing ```node --version```.
+So far, it's working fine for me. The only issue I had was forgetting to ensure my Node version before compiling. I ended up with a nasty and confusing looking build error while still using Node 12 LTS. So be sure you're running Node 10 by typing ```node --version```.
