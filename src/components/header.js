@@ -5,13 +5,15 @@ import Menu from './menu'
 
 const Header = ({ siteTitle, subTitle }) => (
   <header className="mainHeader">
-    <h1>
-      <Link className="title" to="/">
-        {siteTitle}
-      </Link>
-    </h1>
-    <p className="subTitle">{subTitle}</p>
-    <Menu />
+    <div className="container">
+      <h1>
+        <Link className="title" to="/">
+          {siteTitle}
+        </Link>
+      </h1>
+      <p className="subTitle">{subTitle}</p>
+      <Menu />
+    </div>
   </header>
 )
 

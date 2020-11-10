@@ -32,14 +32,14 @@ const Layout = ({ children }) => {
         }
       `}
       render={data => (
-        <div className="wrapper">
+        <div className="flex-wrapper">
           <Header 
             siteTitle={data.site.siteMetadata?.title || `Title`}
             subTitle={data.site.siteMetadata?.subtitle || `Subtitle` } />
     
-          <div className="container">
+          <div className="main container">
             <main className="content">{children}</main>
-            <SideNav />
+            {/* <SideNav /> */}
             {/* <section className="leftNonContentSection"></section> */}
           </div>
     
