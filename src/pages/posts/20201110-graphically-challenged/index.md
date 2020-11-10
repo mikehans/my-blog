@@ -8,7 +8,7 @@ tags:
     - visual design
 ---
 ## Visual design - off to a rocky start
-OK, so I guess visual design was going to be fairly easy. Alas no, I'm graphically challenged.
+OK, so I guess I thought visual design was going to be fairly easy. Alas no, I'm being reminded that I'm graphically challenged.
 
 I suppose I've always been somewhat spoiled, having competent visual designers working with me. Now the shoe's on the other foot, I'm struggling a bit.
 
