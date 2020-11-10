@@ -1,6 +1,8 @@
 import React from 'react';
-// import {Link} from 'gatsby';
-import Layout from "../components/layout"
+import {Link} from 'gatsby';
+import Layout from "../components/layout";
+import dateFormatter from '../components/utilities/dateFormatter';
+import './blog-post.css'
 
 export default function Template({data}){
     const post = data.markdownRemark;
@@ -8,8 +10,9 @@ export default function Template({data}){
     return (
         <Layout>
             <h1>{post.frontmatter.title}</h1>
-            <strong>Posted by {post.frontmatter.author} on {post.frontmatter.date}</strong>
-            <div dangerouslySetInnerHTML={{__html: post.html}}></div>
+            <div className="postByline">Posted by {post.frontmatter.author} on {dateFormatter(post.frontmatter.date, 'long')}</div>
+            <div className="backLink"><Link to="/blog">Back</Link></div>
+            <div className="postBody" dangerouslySetInnerHTML={{__html: post.html}}></div>
         </Layout>
     )
 }

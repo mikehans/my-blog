@@ -1,0 +1,46 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.card {
+    border: none;
+    border-radius: 5px;
+    margin:0.5rem;
+    padding: 0.5rem;
+    box-shadow: 4px 4px 2px 1px rgba(33, 36, 36, 0.2);
+    background-color: #f9f9f9;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 250px;
+    max-width: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .blogSummary {
+    padding-top: 0.5rem;
+}
+
+.card .blogPostTitle {
+    flex-grow: 1;
+}
+
+.card .blogPostDate {
+    font-size: 0.75rem;
+}
+
+.card .blogByline {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.card .blogReadMore {
+    font-size: 0.75rem;
+
+}

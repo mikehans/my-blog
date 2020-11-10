@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo"
+import dateFormatter from '../components/utilities/dateFormatter';
+import './blog.css'
 
 function BlogPage ({data}) {
  
@@ -11,15 +13,20 @@ function BlogPage ({data}) {
         <Layout>
             <SEO title="Blog" />
             <h2>Latest Posts</h2>
-            {data.allMarkdownRemark.edges.map(post => (
-                <div key={post.node.id}>
-                    <h3>{post.node.frontmatter.title}</h3>
-                    <p className="blogByline">Posted by {post.node.frontmatter.author} on {post.node.frontmatter.date}</p>
-                    <br />
-                    <p className="blogReadMore"><Link to={post.node.frontmatter.path}>Read more</Link></p>
-                    <hr />
-                </div>
-            ))}
+
+            <div className="cards">
+              {data.allMarkdownRemark.edges.map(post => (
+                  <div key={post.node.id} className="card">
+                      <h3 className="blogPostTitle">{post.node.frontmatter.title}</h3>
+                      <div className="blogSummary">
+                        <div className="blogPostDate">{dateFormatter(post.node.frontmatter.date, 'long')}</div>
+                        <div className="blogByline">{post.node.frontmatter.author} </div>
+                        <div className="blogReadMore"><Link to={post.node.frontmatter.path}>Read more...</Link></div>
+                      </div>
+                  </div>
+              ))}
+            </div>
+
 
         </Layout>
     )
