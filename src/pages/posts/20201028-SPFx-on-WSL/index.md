@@ -13,17 +13,17 @@ OK, here's a quick one for today...
 Microsoft doesn't seem to discuss developing SharePoint Framework with WSL2. So far I haven't had any issues with it, so it seems about time to discuss it.
 
 ### Why?
-SharePoint Framework requires NodeJS 10.x. In fact, it won't work on a more recent Node version. On my Windows 10 machine I'm running a later release. Ubuntu on WSL allows me to manage my NodeJS versions with <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noreferrer">Node Version Manager</a>. With this I can have multiple Node versions installed and can alternate between them. I just need to remember to ensure which Node version I'm running before I start work.
+SharePoint Framework requires NodeJS 10.x. In fact, it won't work on a more recent Node version. On my Windows 10 machine I'm running a later release. Ubuntu on WSL allows me to manage my NodeJS versions with <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noreferrer">Node Version Manager</a> <i class="fas fa-external-link-alt"></i>. With this I can have multiple Node versions installed and can alternate between them. I just need to remember to ensure which Node version I'm running before I start work.
 
 ### Setting up SharePoint Framework in WSL2
 #### Assumptions
 First of all, some assumptions... I'm assuming you have the already have the following set up:
-* <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank" rel="noreferrer">WSL2</a>
-* <a href="https://www.microsoft.com/en-us/p/ubuntu-2004-lts/9n6svws3rx71?activetab=pivot:overviewtab" target="_blank" rel="noreferrer">Ubuntu running in WSL2</a>
-* <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noreferrer">nvm</a> installed
+* <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank" rel="noreferrer">WSL2</a> <i class="fas fa-external-link-alt"></i>
+* <a href="https://www.microsoft.com/en-us/p/ubuntu-2004-lts/9n6svws3rx71?activetab=pivot:overviewtab" target="_blank" rel="noreferrer">Ubuntu running in WSL2</a> <i class="fas fa-external-link-alt"></i>
+* <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noreferrer">nvm</a> <i class="fas fa-external-link-alt"></i> installed
 * Node 10.x LTS installed in nvm (```nvm install --lts=dubnium```) and have switched to it (```nvm use lts/dubnium```)
-* <a href="https://www.npmjs.com/package/yo" target="_blank" rel="noreferrer">Yeoman</a> and <a href="https://www.npmjs.com/package/@microsoft/generator-sharepoint" target="_blank" rel="noreferrer">@microsoft/generator-sharepoint</a> are installed globally through npm (```npm install -g yo @microsoft/generator-sharepoint```)
-* While you're supposed to install <a href="https://www.npmjs.com/package/gulp" target="_blank" rel="noreferrer">Gulp</a> globally, you don't need to and there are some good reasons not to. 
+* <a href="https://www.npmjs.com/package/yo" target="_blank" rel="noreferrer">Yeoman</a> <i class="fas fa-external-link-alt"></i> and <a href="https://www.npmjs.com/package/@microsoft/generator-sharepoint" target="_blank" rel="noreferrer">@microsoft/generator-sharepoint</a> <i class="fas fa-external-link-alt"></i> are installed globally through npm (```npm install -g yo @microsoft/generator-sharepoint```)
+* While you're supposed to install <a href="https://www.npmjs.com/package/gulp" target="_blank" rel="noreferrer">Gulp</a> <i class="fas fa-external-link-alt"></i> globally, you don't need to and there are some good reasons not to. 
     * Instead of typing  ```gulp serve``` as you do when Gulp is installed globally, you can type ```npx gulp serve``` or add it to a start script in your package.json and type ```npm start```. I recommend the latter.
 
 #### How to set it up
