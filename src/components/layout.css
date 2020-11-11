@@ -50,6 +50,11 @@ pre {
   margin-right: 16px;
 }
 
+img {
+  font-size: 0.75rem;
+  color: lightgray;
+}
+
 .flex-wrapper {
 	display:flex;
   flex-direction: column;
