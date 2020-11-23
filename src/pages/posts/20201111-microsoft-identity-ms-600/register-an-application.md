@@ -1,12 +1,14 @@
 ---
 path: "/blog/microsoft-identity-ms-600-page-2"
-date: "2020-11-11"
+date: "2020-11-19"
 title: "Microsoft Identity (MS-600) - Register an application"
 author: "Mike Hansford"
 tags:
     - MS-600
     - Microsoft Identity
     - Microsoft 365
+    - OpenID Connect
+    - OAuth 2.0
 ---
 [Return to Table of Contents for the Microsoft Identity (MS-600) posts](microsoft-identity-ms-600)
 
@@ -17,7 +19,7 @@ This is referring to the process of creating the application object in AAD.
 This is talking specifically about the account type for the application object you are creating.
 ![Azure Active Directory new registration showing account types](./aad-new-registration.png)
 
-The key here is what do each of the four options under "Supported account types" grant / prohibit? Clicking on the "Help me choose" link is helpful to understanding these.
+The key here is what do each of the four options under "Supported account types" grant / prohibit. Clicking on the "Help me choose" link is helpful to understanding these.
 * Accounts in this organisational directory only (single tenant)
     * an application has something called a home tenant
     * only users in the same home tenant as the application can sign into it (_mikehans1_ in the example)
@@ -28,6 +30,8 @@ The key here is what do each of the four options under "Supported account types"
     * users in AAD organisations outside of the home tenant can sign into the application
     * useful for ISVs who are sharing (selling!) their application to many clients who use AAD
         * you still have the issue of separating the application's data by tenant - this doesn't magically resolve it
+    * in the home tenant, an appliction object will be created as well as a service principal
+        * in other tenants, a service principal will be created. This allows administrators of that tenant to assign users and groups to the application
 * Accounts in any organisational directory and personal Microsoft accounts
     * this will allow multi-tenancy AAD customers as well as customers using Microsoft accounts
     * will allow for the widest set of Microsoft identites to be used
@@ -61,9 +65,17 @@ or is it the list of <a href="https://docs.microsoft.com/en-us/azure/active-dire
 * Daemon app
 * Mobile app that calls web APIs
 
-Frankly, these start to sound very similar. The approach I'm taking for now is to understand these and hope that the question leads me sufficiently.
+Frankly, these start to sound very similar. The approach I'm taking for now is to understand these in the expectation that the question leads me sufficiently.
+
+What is important is understanding that some apps are public (such as a web app or a UWP app) and some are protected (a daemon or service). Protected apps are called _confidential client applications_. Only confidential client apps can safely use a public key or a secret (a public key is recommended for production). Confidential client applications are sensitive in nature, owing to the kinds of work they do and must be explicitly approved by an admin. For public applications, you want the user to authenticate themselves with user credentials as once the key or secret is out there, a user can do pretty much whatever they want within the scope of the application. I'd be thinking twice about re-using my public / private key pairs... I think that secrets are by definition single use only.
+
+There is also the case where some app types that take the client credential (access token), obtain another token for it and pass it along. I think this is the case of a web app that calls other web APIs. The web app receives the access token, requests a new access token from AAD, then passes along the request to the web API. I'm not sure how much of this I really need to know though. It seems more like something relevant to the security oriented certs. I don't think there's anything of relevance to a developer.
+
+Apps that don't have a user involved, such as daemon apps, do not include user credentials in their flow (obviously). These apps work independently of a user and receive permissions called _application permissions_. This term will most certainly be used in the exam.
 #### Outstanding questions
 * ~~How does account type relate to topology?~~
 
 #### Resources for this criteria
 * <a hrf="https://docs.microsoft.com/en-us/learn/modules/getting-started-identity/4-different-account-types" target="_blank" rel="noreferrer">MS Learn page</a>
+
+### Define app roles
