@@ -76,6 +76,14 @@ Apps that don't have a user involved, such as daemon apps, do not include user c
 * ~~How does account type relate to topology?~~
 
 #### Resources for this criteria
-* <a hrf="https://docs.microsoft.com/en-us/learn/modules/getting-started-identity/4-different-account-types" target="_blank" rel="noreferrer">MS Learn page</a>
+* <a href="https://docs.microsoft.com/en-us/learn/modules/getting-started-identity/4-different-account-types" target="_blank" rel="noreferrer">MS Learn page</a>
 
 ### Define app roles
+App roles introduce a separation and interface between the infosec concerns of the developer and the admin. It allows the developer to specify role permissions within the app and the admin, at app registration time can add users and security groups to these roles. In doing so, the developer won't need to update the code to accommodate administrative changes to groups and users.
+
+#### Notes on the Hands on Lab in MS Learn
+The Hands on Lab in MS Learn (<a href="https://docs.microsoft.com/en-us/learn/modules/identity-users-groups-approles/3-exercise-create-web-app" target="_blank" rel="noreferrer">Exercise - Create and secure a web app with Microsoft identity</a>) is out of date. 
+
+When following the lab, I allowed ```Microsoft.Identity.Web``` and ```Microsoft.Identity.Web.UI``` to be at the current versions (both v1.3.0 as at the time of writing) instead of the 0.3.1-preview versions used in the HOL. When you then copy the provided code into the ```ConfigureServices()``` method, VS Code provided me with an error on ```AzureADDefaults.OpenIdScheme```. On inspection of the documentation for the <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authentication.azuread.ui.azureaddefaults?view=aspnetcore-5.0" target="_blank" rel="noreferrer">AzureADDefaults class</a> there is a warning that this class is obsolete and will be removed and to use Microsoft.Identity.Web instead.
+
+The warning then links to <a href="https://aka.ms/ms-identity-web" target="_blank" rel="noreferrer">https://aka.ms/ms-identity-web</a>. It lists new templates. Looking at this, I should now be using ```dotnet new mvc2``` rather than ```dotnet new mvc``` when commencing a new project.
