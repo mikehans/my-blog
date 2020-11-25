@@ -1,6 +1,6 @@
 ---
 path: "/blog/microsoft-identity-ms-600-page-2"
-date: "2020-11-19"
+date: "2020-11-25"
 title: "Microsoft Identity (MS-600) - Register an application"
 author: "Mike Hansford"
 tags:
@@ -72,14 +72,16 @@ What is important is understanding that some apps are public (such as a web app 
 There is also the case where some app types that take the client credential (access token), obtain another token for it and pass it along. I think this is the case of a web app that calls other web APIs. The web app receives the access token, requests a new access token from AAD, then passes along the request to the web API. I'm not sure how much of this I really need to know though. It seems more like something relevant to the security oriented certs. I don't think there's anything of relevance to a developer.
 
 Apps that don't have a user involved, such as daemon apps, do not include user credentials in their flow (obviously). These apps work independently of a user and receive permissions called _application permissions_. This term will most certainly be used in the exam.
-#### Outstanding questions
-* ~~How does account type relate to topology?~~
 
 #### Resources for this criteria
 * <a href="https://docs.microsoft.com/en-us/learn/modules/getting-started-identity/4-different-account-types" target="_blank" rel="noreferrer">MS Learn page</a>
 
 ### Define app roles
-App roles introduce a separation and interface between the infosec concerns of the developer and the admin. It allows the developer to specify role permissions within the app and the admin, at app registration time can add users and security groups to these roles. In doing so, the developer won't need to update the code to accommodate administrative changes to groups and users.
+App roles introduce a separation and interface between the authorisation concerns of the developer and the admin. It allows the developer to specify role permissions within the app and the admin, at app registration time can add users and security groups to these roles. In doing so, the developer won't need to update the code to accommodate administrative changes to groups and users.
+
+It's seems a bit weird that once you create your App Registration, you need to find it in the Enterprise Applications blade and under the Properties section, enable _User assignment required_, in order to enable roles. It would be far more convenient to do this through the App Registration but it is what it is...
+
+Presently, you also need to directly edit the application's manifest (a JSON file) to specify the roles. Helpfully, once you open the Manifest in the App Registration, you get a link to the <a href="https://docs.microsoft.com/en-au/azure/active-directory/develop/reference-app-manifest?WT.mc_id=Portal-Microsoft_AAD_RegisteredApps" target="_blank" rel="noreferrer">documentation for the Manifest file</a>.
 
 #### Notes on the Hands on Lab in MS Learn
 The Hands on Lab in MS Learn (<a href="https://docs.microsoft.com/en-us/learn/modules/identity-users-groups-approles/3-exercise-create-web-app" target="_blank" rel="noreferrer">Exercise - Create and secure a web app with Microsoft identity</a>) is out of date. 
