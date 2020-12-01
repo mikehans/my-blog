@@ -28,6 +28,8 @@ This was going to be a single page post, but it long quickly. So, refer to the T
 
 * Account type
 * Delegated permissions
+    * All permissions used by an app that has a signed-in user
+    * Also referred to as "on behalf of" permissions as the app is authorised to act on behalf of the user
 * Consent
     * Related to OAuth 2.0, the user will be asked to provide their consent to allow the app to do a number of things. These are called scopes and is a common term in OAuth 2.0 / OIDC. I don't know if these are common terms though. In Microsoft 365, some scopes require admin consent. These are typically very powerful scopes or ones that could potentially alter the infosec stance of the tenant. These are scopes like Read and Write All User Profiles (User.ReadWrite.All)
 * OpenID Connect
@@ -38,7 +40,7 @@ This was going to be a single page post, but it long quickly. So, refer to the T
 * Home tenant
     * The tenant to which an app is deployed to is called the home tenant. AAD in this tenant hosts the application object and also has a service principal.
 * Appliction object
-    * An AAD object that maps 1 to 1 with an application
+    * An Azure Active Directory (AAD) object that maps 1 to 1 with an application
 * Service principal object
     * An object that is created in each tenant to which the app is shared (in the case of a multi-tenant app)
     * A service principal is also created in the home tenant.
