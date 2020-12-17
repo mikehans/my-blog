@@ -15,6 +15,7 @@ export default function Menu() {
                 <li className="nav-item"><Link to="/">Home</Link></li>
                 <li className="nav-item"><Link to="/contact-me">Contact Me</Link></li>
                 <li className="nav-item"><Link to="/blog">Blog</Link></li>
+                <li className="nav-item"><Link to="/site-development">Site Development</Link></li>
             </ul>
         </nav>
     )
