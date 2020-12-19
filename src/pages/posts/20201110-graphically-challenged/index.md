@@ -3,6 +3,7 @@ path: "/blog/site-development-graphically-challenged"
 date: "2020-11-10"
 title: "Site Development: I'm graphically challenged"
 author: "Mike Hansford"
+type: "post"
 tags:
     - site development
     - visual design

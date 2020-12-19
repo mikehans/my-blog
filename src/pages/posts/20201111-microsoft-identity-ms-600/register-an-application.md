@@ -3,6 +3,7 @@ path: "/blog/microsoft-identity-ms-600-page-2"
 date: "2020-11-25"
 title: "Microsoft Identity (MS-600) - Register an application"
 author: "Mike Hansford"
+type: "post"
 tags:
     - MS-600
     - Microsoft Identity

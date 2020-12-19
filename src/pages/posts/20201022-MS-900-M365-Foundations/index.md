@@ -3,6 +3,7 @@ path: "/blog/ms-900-microsoft-365-fundamentals"
 date: "2020-10-22"
 title: "Microsoft 365 Fundamentals Exam"
 author: "Mike Hansford"
+type: "post"
 tags:
     - MS-900
     - Microsoft 365
