@@ -1,28 +1,46 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo"
+import DevLogEntry from "../components/devLog"
 
-const SiteDevelopmentPage = () => (
-    <Layout>
-        <SEO title="Site Development" />
-        <p>
-            I'm currently re-doing the visual design for this site.
-        </p>
-        <p>
-            You can check my <a href="https://vd-redesign-0d416f.netlify.app/">latest test deployment here.</a>
-        </p>
-        <p>
-        I am currently adapting the visual design for React from <a href="https://html5up.net/solid-state">the Solid State design on HTML5 Up.</a>
-        </p>
-        <p> You can view my <a href="https://github.com/mikehans/my-blog/tree/vd-redesign">vd-redesign branch on Github.</a></p>
+function DevLogPage ({data}) {
+ 
+    return (
+        <Layout>
+            <SEO title="Site Development" />
+            <h2>Site Development</h2>
 
-        <p>
-            You can also follow site development on my <a href="https://trello.com/b/LE4p3TtF/website" target="_blank">Trello board.</a>
-        </p>
-    </Layout>
-);
+            <section className="devLog">
+              {data.allMarkdownRemark.edges.map(post => (
+                  <DevLogEntry {...post} />
+              ))}
+            </section>
 
-export default SiteDevelopmentPage;
+
+        </Layout>
+    )
+}
+
+export const pageQuery = graphql`
+    query SiteLogQuery {
+        allMarkdownRemark(filter: {frontmatter: {publish: {eq: true}}, fileAbsolutePath: {glob: "**/log/**"}}, sort: {fields: frontmatter___date, order: DESC}) {
+            edges {
+              node {
+                id
+                html
+                frontmatter {
+                  author
+                  date
+                  title
+                  publish
+                }
+              }
+            }
+          }
+    }
+`
+
+export default DevLogPage

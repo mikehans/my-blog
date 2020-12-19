@@ -7,37 +7,48 @@
 // You can delete this file if you're not using it
 const path = require('path');
 
-exports.createPages = ({boundActionCreators, graphql}) => {
-    const {createPage} = boundActionCreators;
+exports.createPages = async ({graphql, actions}) => {
+    const {createPage} = actions;
 
-    const postTemplate = path.resolve('src/templates/blog-post.js');
-
-    return graphql(`
-        {
+    const result = await graphql(`
+        query {
             allMarkdownRemark {
                 edges {
                     node {
                         id
                         frontmatter {
-                        author
-                        date
-                        path
-                        title
+                            author
+                            date
+                            path
+                            type
+                            title
                         }
                     }
                 }
             }
         }
-    `).then(res => {
-        if(res.errors) {
-            return Promise.reject(res.errors);
-        }
+    `);
 
-        res.data.allMarkdownRemark.edges.forEach(({node}) => {
-            createPage({
-                path: node.frontmatter.path,
-                component: postTemplate
-            })
-        })
-    })
+    const posts = result.data.allMarkdownRemark.edges.filter(({node}) => {
+        return node.frontmatter.type === 'post';
+    });
+
+    
+    const pages = result.data.allMarkdownRemark.edges.filter(({node}) => {
+        return node.frontmatter.type === 'page';
+    });
+
+    posts.forEach(node => {
+        createPage({
+            path: node.node.frontmatter.path,
+            component: path.resolve('./src/templates/blog-post.js')
+        });
+    });
+
+    pages.forEach(node => {
+        createPage({
+            path: node.node.frontmatter.path,
+            component: path.resolve('./src/templates/page.js')
+        });
+    });
 }

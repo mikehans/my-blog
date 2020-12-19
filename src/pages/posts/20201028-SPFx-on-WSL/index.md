@@ -3,6 +3,7 @@ path: "/blog/sharepoint-framework-on-wsl2"
 date: "2020-10-28"
 title: "Developing with SharePoint Framework on WSL2"
 author: "Mike Hansford"
+type: "post"
 tags:
     - SharePoint Framework
     - WSL

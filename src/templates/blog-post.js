@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import dateFormatter from '../components/utilities/dateFormatter';
 import './blog-post.css'
 
-export default function Template({data}){
+export default function BlogPostTemplate({data}){
     const post = data.markdownRemark;
 
     return (
