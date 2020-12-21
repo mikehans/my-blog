@@ -5,7 +5,6 @@ import dateFormatter from '../components/utilities/dateFormatter';
 import "./devlog.css"
 
 const DevLogEntry = (props) => {
-    console.log(JSON.stringify(props, null, 4));
     return (
         <article className="logEntry" key={props.node.id}>
             <h3 className="logDate">{dateFormatter(props.node.frontmatter.date, 'long')}</h3>
