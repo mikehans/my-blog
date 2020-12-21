@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: `Mike Hansford`,
+    siteUrl: `https://mikehansford.id.au`,
     description: `Mike Hansford's software development blog.`,
     author: `Mike Hansford`,
     subtitle: `Web development, Microsoft 365, Power Platform`
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -43,13 +45,13 @@ module.exports = {
           },
         ],
       },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/pages/posts`
-      }
     }
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/pages/posts`
+    //   }
+    // }
     // `gatsby-plugin-sharp`,
     // {
     //   resolve: `gatsby-plugin-manifest`,
