@@ -1,3 +1,3 @@
-Here's the code for mikehansford.id.au.
+This is the code for my website: mikehansford.id.au.
 
-Let's call it a work in progress...
+It's an ongoing project presenting my technical blog, some project based work and some updates on my woodwork, gardening, cooking(!) and electronics hobbies.
