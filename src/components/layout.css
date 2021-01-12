@@ -57,6 +57,8 @@ html {
 body {
   margin: 0;
   font-family: var(--font--family);
+  background-color: var(--palette-bg);
+  color: var(--palette-fg);
 }
 
 h1,

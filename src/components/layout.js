@@ -10,8 +10,9 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./Header"
+import Banner from './Banner'
 import "./layout.css"
-import SideNav from './sideNav'
+// import SideNav from './sideNav'
 import Footer from './footer'
 
 const Layout = ({ children }) => {
@@ -37,6 +38,10 @@ const Layout = ({ children }) => {
             siteTitle={data.site.siteMetadata?.title || `Title`}
             subTitle={data.site.siteMetadata?.subtitle || `Subtitle` } />
     
+          <Banner 
+            siteTitle={data.site.siteMetadata?.title || `Title`}
+            subTitle={data.site.siteMetadata?.subtitle || `Subtitle` } />
+            
           <div className="main container">
             <main className="content">{children}</main>
             {/* <SideNav /> */}
