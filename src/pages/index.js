@@ -3,12 +3,14 @@ import React from "react"
 
 import Layout from "../components/layout"
 // import Image from "../components/image"
+import ContentSectionList from '../components/ContentSectionList'
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h2>Hi I'm Mike</h2>
+    <ContentSectionList />
+    {/* <h2>Hi I'm Mike</h2>
     <p>I'm a software developer with extensive experience in web development, Microsoft SharePoint, Microsoft Office, Microsoft 365.</p>
 
     <p>I blog about web development, Microsoft Power Platform and Microsoft 365 though I'll likely touch on other topics of interest. </p>
@@ -26,7 +28,7 @@ const IndexPage = () => (
       having worked predominantly on established websites.
       This site is being built (presently) in Gatsby and hosted on Netlify. 
       I have a lot to learn and it should be a lot of fun.
-    </p>
+    </p> */}
 
   </Layout>
 )

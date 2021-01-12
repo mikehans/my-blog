@@ -11,7 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./Header"
 import Banner from './Banner'
-import ContentSection from './ContentSection'
+import ContentSectionList from './ContentSectionList'
 import "./layout.css"
 // import SideNav from './sideNav'
 import Footer from './Footer'
@@ -45,35 +45,10 @@ const Layout = ({ children }) => {
           
           
           {/* <div className="main container">
-            <main className="content">{children}</main>
           </div> */}
           <section className="main container">
-            <ContentSection styleNumber="1"/>
-            <ContentSection styleNumber="2" altFacing />
-            <ContentSection styleNumber="3" />
-            <ContentSection styleNumber="1" altFacing />
-
-							{/* <section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Tempus adipiscing</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
-								</div>
-							</section> */}
-
-							{/* <section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Nullam dignissim</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
-								</div>
-							</section> */}
+            <main className="content">{children}</main>
+            {/* <ContentSectionList /> */}
 
 							{/* <section id="four" class="wrapper alt style1">
 								<div class="inner">
