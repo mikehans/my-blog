@@ -14,7 +14,7 @@ import Banner from './Banner'
 import ContentSection from './ContentSection'
 import "./layout.css"
 // import SideNav from './sideNav'
-import Footer from './footer'
+import Footer from './Footer'
 
 const Layout = ({ children }) => {
 
