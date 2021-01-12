@@ -45,6 +45,17 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`postcss-mixins`),
+          require(`postcss-simple-vars`),
+          require(`postcss-nested`),
+          require(`autoprefixer`)
+        ]
+      }
     }
     // {
     //   resolve: `gatsby-source-filesystem`,
