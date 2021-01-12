@@ -1,11 +1,12 @@
 import React from 'react'
+import {Link} from 'gatsby'
 import styles from './ContentSection.module.css';
 
 export default function ContentSection(props) {
     console.log('props', props);
 
 
-    let {styleNumber, altFacing = false} = props;
+    let {styleNumber, altFacing = false, heading='Test me', intro='Lorem ipsum forceum blah blah blah', link='#'} = props;
 
     console.log(styleNumber, altFacing);
 
@@ -33,9 +34,9 @@ export default function ContentSection(props) {
             <div className={styles.contentSectionInner}>
                     <a href="#" className="image"><img src="images/pic01.jpg" alt="" /></a>
                     <div className="content">
-                        <h2 className="major">Magna arcu feugiat</h2>
-                        <p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-                        <a href="#" className="special">Learn more</a>
+                        <h2 className={styles.contentSectionMajor}>{heading}</h2>
+                        <p>{intro}</p>
+                        <Link to={link} className="special">Learn more</Link>
                     </div>
                 </div>
             </section>
