@@ -1,6 +1,6 @@
-.mainFooter {
-    background-color: #2e3141;
-}
+/* .mainFooter {
+    background-color: var(--palette-bg);
+} */
 
 .mainFooter-container {
     padding-top: 5em;
@@ -9,4 +9,7 @@
     padding-left: 0;
     margin-right: auto;
     margin-left: auto;
+    width: 55em;
+
+    display: flex;
 }

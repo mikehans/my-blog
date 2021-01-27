@@ -1,0 +1,22 @@
+.contactList {
+    list-style: none;
+}
+
+.contactList-twitter a {
+    color: white;
+    text-decoration: none;
+}
+
+.contactList-twitter:before {
+    content: "\f0e1";
+    display: inline-block;
+}
+
+.contactList-linkedIn a {
+    color: white;
+    text-decoration: none;
+}
+
+.contactList-linkedIn:before {
+
+}

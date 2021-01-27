@@ -4,7 +4,9 @@ module.exports = {
     siteUrl: `https://mikehansford.id.au`,
     description: `Mike Hansford's software development blog.`,
     author: `Mike Hansford`,
-    subtitle: `Web development, Microsoft 365, Power Platform`
+    subtitle: `Web development, Microsoft 365, Power Platform`,
+    linkedIn: `https://www.linkedin.com/in/mikehansford`,
+    twitter: `https://twitter.com/mikehansford10`
   },
   plugins: [
     `gatsby-plugin-sitemap`,
