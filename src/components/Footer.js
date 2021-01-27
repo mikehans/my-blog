@@ -7,7 +7,10 @@ export default function Footer(props) {
     <footer className={styles.mainFooter}>
         <div className={styles.mainFooterContainer}>
             <Contact {...props} />
+            <p>
             © {new Date().getFullYear()}, Mike Hansford.
+            </p>
+            
         </div>
     </footer>
     )

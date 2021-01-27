@@ -11,7 +11,6 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./Header"
 import Banner from './Banner'
-import ContentSectionList from './ContentSectionList'
 import "./layout.css"
 // import SideNav from './sideNav'
 import Footer from './Footer'
@@ -31,6 +30,7 @@ const Layout = ({ children }) => {
 			  subtitle
 			  twitter
 			  linkedIn
+			  github
             }
           }
         }
@@ -51,7 +51,8 @@ const Layout = ({ children }) => {
           </section>
 		  <Footer 
 		  	Twitter={data.site.siteMetadata?.twitter || `A Twitter URL`} 
-			LinkedIn={data.site.siteMetadata?.linkedIn || `Some LinkedIn`} />
+			LinkedIn={data.site.siteMetadata?.linkedIn || `Some LinkedIn`}
+			Github={data.site.siteMetadata?.github} />
         </div>
       )}
     />

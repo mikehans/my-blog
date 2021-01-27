@@ -12,4 +12,5 @@
     width: 55em;
 
     display: flex;
+    flex-direction: column;
 }
