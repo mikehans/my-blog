@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo"
 import dateFormatter from '../components/utilities/dateFormatter';
-import './blog.css'
+import blogStyles from './Blog.module.css'
 import styles from './reactPage.module.css'
 
 function BlogPage({ data }) {
@@ -24,14 +24,14 @@ function BlogPage({ data }) {
 
             <h2>Latest Posts</h2>
 
-            <div className="cards">
+            <div className={blogStyles.cards}>
               {data.allMarkdownRemark.edges.map(post => (
-                <div key={post.node.id} className="card">
-                  <h3 className="blogPostTitle">{post.node.frontmatter.title}</h3>
-                  <div className="blogSummary">
-                    <div className="blogPostDate">{dateFormatter(post.node.frontmatter.date, 'long')}</div>
-                    <div className="blogByline">{post.node.frontmatter.author} </div>
-                    <div className="blogReadMore"><Link to={post.node.frontmatter.path}>Read more...</Link></div>
+                <div key={post.node.id} className={blogStyles.card}>
+                  <h3 className={blogStyles.blogPostTitle}>{post.node.frontmatter.title}</h3>
+                  <div className={blogStyles.blogSummary}>
+                    <div className={blogStyles.blogPostDate}>{dateFormatter(post.node.frontmatter.date, 'long')}</div>
+                    <div className={blogStyles.blogByline}>{post.node.frontmatter.author} </div>
+                    <div className={blogStyles.blogReadMore}><Link to={post.node.frontmatter.path}>Read more...</Link></div>
                   </div>
                 </div>
               ))}
