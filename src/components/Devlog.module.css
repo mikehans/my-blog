@@ -1,0 +1,23 @@
+.log-entry {
+    border: none;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+
+    border-radius: 5px;
+    border: 2px solid var(--palette-border);
+    background-color: var(--palette-border-bg);
+}
+
+.log-title {
+    margin-top: 0.5 rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.log-body {
+    margin-left: 2 rem;
+}

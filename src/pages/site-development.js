@@ -1,10 +1,10 @@
 import React, { useEffect } from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo"
-import DevLogEntry from "../components/devLog"
+import DevLogEntry from "../components/DevLog"
 import styles from './reactPage.module.css'
 
 function DevLogPage({ data }) {
