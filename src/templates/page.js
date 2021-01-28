@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import Layout from "../components/layout";
-import dateFormatter from '../components/utilities/dateFormatter';
+// import dateFormatter from '../components/utilities/dateFormatter';
 import styles from './page.module.css';
 
 export default function PageTemplate({ data }) {

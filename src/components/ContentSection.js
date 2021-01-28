@@ -27,7 +27,7 @@ export default function ContentSection(props) {
     return (
         <section className={styleString}>
             <div className={styles.contentSectionInner}>
-                <a href="#" className="image"><img src="images/pic01.jpg" alt="" /></a>
+                <a href="#" className="image" alt=""><img src="images/pic01.jpg" alt="" /></a>
                 <div className="content">
                     <h2 className={styles.contentSectionMajor}>{heading}</h2>
                     <p>{intro}</p>
