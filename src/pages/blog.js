@@ -21,7 +21,7 @@ function BlogPage({ data }) {
       <div className={styles.content}>
         <section className={styles.contentSection}>
           <div className={styles.contentSectionInner}>
-
+            
             <h2>Latest Posts</h2>
 
             <div className={blogStyles.cards}>
@@ -40,10 +40,6 @@ function BlogPage({ data }) {
           </div>
         </section>
       </div>
-
-
-
-
 
     </Layout>
   )

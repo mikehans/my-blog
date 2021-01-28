@@ -41,7 +41,7 @@ exports.createPages = async ({graphql, actions}) => {
     posts.forEach(node => {
         createPage({
             path: node.node.frontmatter.path,
-            component: path.resolve('./src/templates/blog-post.js')
+            component: path.resolve('./src/templates/Blog-post.js')
         });
     });
 
