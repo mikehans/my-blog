@@ -6,7 +6,7 @@ author: "Mike Hansford"
 type: "page"
 publish: true
 ---
-## Hi I'm Mike and this is the About 2 page
+## Hi I'm Mike
 
 I'm a software developer with extensive experience in web development, Microsoft SharePoint, Microsoft Office, Microsoft 365.
 
