@@ -5,19 +5,17 @@ import dateFormatter from '../components/utilities/dateFormatter';
 import styles from './page.module.css';
 
 export default function PageTemplate({ data }) {
-    const page = data.markdownRemark;
-
+    
     useEffect(() => {
         document.body.classList.add('hasBackgroundImage');
     });
-
+    
+    const page = data.markdownRemark;
+    
     return (
         <Layout>
-            {/* contentSectionList */}
             <div className={styles.content}> 
-                {/* contentSection */}
                 <section className={styles.contentSection}>
-                    {/* contentSectionInner */}
                     <div className={styles.contentSectionInner} dangerouslySetInnerHTML={{ __html: page.html }}></div>
                 </section>
             </div>
