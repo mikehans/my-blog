@@ -10,10 +10,11 @@ export default function Footer(props) {
                 <h2>Get in touch</h2>
                 <p>
                     I'm always interested in hearing from you. You can get in touch through one of
-                    the channels listed or use the contact form here.
+                    the channels listed.
+                    {/* or use the contact form here */}
                 </p>
                 <div className={styles.mainFooterContacts}>
-                    <ContactForm />
+                    {/* <ContactForm /> */}
                     <Contact {...props} />
                 </div>
                 <p>
