@@ -9,10 +9,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import Header from "./Header"
+import Banner from './Banner'
 import "./layout.css"
-import SideNav from './sideNav'
-import Footer from './footer'
+// import SideNav from './sideNav'
+import Footer from './Footer'
 
 const Layout = ({ children }) => {
 
@@ -26,7 +27,10 @@ const Layout = ({ children }) => {
               title
               description
               author
-              subtitle
+			  subtitle
+			  twitter
+			  linkedIn
+			  github
             }
           }
         }
@@ -37,13 +41,18 @@ const Layout = ({ children }) => {
             siteTitle={data.site.siteMetadata?.title || `Title`}
             subTitle={data.site.siteMetadata?.subtitle || `Subtitle` } />
     
-          <div className="main container">
+          <Banner 
+            siteTitle={data.site.siteMetadata?.title || `Title`}
+            subTitle={data.site.siteMetadata?.subtitle || `Subtitle` } />
+          
+          <section className="main container">
             <main className="content">{children}</main>
-            {/* <SideNav /> */}
-            {/* <section className="leftNonContentSection"></section> */}
-          </div>
-    
-          <Footer />
+
+          </section>
+		  <Footer 
+		  	Twitter={data.site.siteMetadata?.twitter || `A Twitter URL`} 
+			LinkedIn={data.site.siteMetadata?.linkedIn || `Some LinkedIn`}
+			Github={data.site.siteMetadata?.github} />
         </div>
       )}
     />

@@ -4,7 +4,10 @@ module.exports = {
     siteUrl: `https://mikehansford.id.au`,
     description: `Mike Hansford's software development blog.`,
     author: `Mike Hansford`,
-    subtitle: `Web development, Microsoft 365, Power Platform`
+    subtitle: `Web development, Microsoft 365, Power Platform`,
+    linkedIn: `linkedin.com/in/mikehansford`,
+    twitter: `twitter.com/mikehansford10`,
+    github: `github.com/mikehans`
   },
   plugins: [
     `gatsby-plugin-sitemap`,
@@ -45,6 +48,17 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`postcss-mixins`),
+          require(`postcss-simple-vars`),
+          require(`postcss-nested`),
+          require(`autoprefixer`)
+        ]
+      }
     }
     // {
     //   resolve: `gatsby-source-filesystem`,

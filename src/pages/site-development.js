@@ -1,27 +1,41 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useEffect } from "react"
+// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo"
-import DevLogEntry from "../components/devLog"
+import DevLogEntry from "../components/DevLog"
+import styles from './reactPage.module.css'
 
-function DevLogPage ({data}) {
- 
-    return (
-        <Layout>
-            <SEO title="Site Development" />
+function DevLogPage({ data }) {
+
+  useEffect(() => {
+    document.body.classList.add('hasBackgroundImage');
+  });
+
+  return (
+    <Layout>
+      <SEO title="Site Development" />
+
+      <div className={styles.content}>
+        <section className={styles.contentSection}>
+          <div className={styles.contentSectionInner}>
             <h2>Site Development</h2>
-
             <section className="devLog">
               {data.allMarkdownRemark.edges.map(post => (
-                  <DevLogEntry {...post} />
+                <DevLogEntry {...post} />
               ))}
             </section>
+          </div>
+        </section>
+      </div>
 
 
-        </Layout>
-    )
+
+
+
+    </Layout>
+  )
 }
 
 export const pageQuery = graphql`
