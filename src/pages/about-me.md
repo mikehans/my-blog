@@ -13,12 +13,9 @@ I'm a software developer with extensive experience in web development, Microsoft
 I blog about web development, Microsoft Power Platform and Microsoft 365 though I'll likely touch on other topics of interest. 
 
 I live in Melbourne, Australia with family. I'm something of a gardener, woodworker and electronics hack.
-I try to grow vegetables and am periodically wonder what
+I try to grow vegetables and periodically wonder what
 to do with a glut in some vegetable or another. My last go at radish pickles failed miserably, though I'm sure the
-compost loved it.
-
-I'm trying to figure out how to make better use of my Raspberry Pi and am trying to build a moisture monitoring 
-system for my garden with my Arduino gear.
+compost loved it. I've also been known to bemoan the seemingly regular failure of some crop or another.
 
 This site is defintely a work in progress too. It's somewhat bare-bones right now. 
 It's been rather a while since I designed a website from scratch, having worked predominantly on established websites.
