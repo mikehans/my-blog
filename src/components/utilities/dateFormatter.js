@@ -6,7 +6,7 @@ export default function dateFormatter(theDate, format) {
             'Sep', 'Oct', 'Nov', 'Dec'
         ],
         long: [
-            'January', 'Februaru', 'March', 'April',
+            'January', 'February', 'March', 'April',
             'May', 'June', 'July', 'August',
             'September', 'October', 'November', 'December'
         ]
