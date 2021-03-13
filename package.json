@@ -33,7 +33,7 @@
     "prettier": "2.1.1"
   },
   "keywords": [
-    "gatsby"
+    "blog", "website", "dotNET", "ReactJS", "JavsScript"
   ],
   "license": "0BSD",
   "scripts": {
