@@ -10,7 +10,13 @@ export default function ContentSectionList() {
                 heading="Hi I'm Mike"
                 intro="I'm a software developer, family man, woodworker, gardener and electronics hack."
                 link='/about-me' />
-            <ContentSection styleNumber="2" altFacing />
+            <ContentSection 
+                styleNumber="2" 
+                heading="Read my tech blog"
+                intro="I blog about JavaScript, ReactJS, dotNET and Microsoft 365."
+                link='/blog'
+                altFacing 
+                />
             <ContentSection styleNumber="3" />
             <ContentSection styleNumber="1" altFacing />
         </section>
