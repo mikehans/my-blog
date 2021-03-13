@@ -4,7 +4,7 @@ import styles from './ContactForm.module.css'
 export default function ContactForm() {
 
     return (
-        <form className={styles.contactForm} id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form action="#" className={styles.contactForm} id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="contact" value="Contact Form" />
             <div className={styles.contactFormFields}>

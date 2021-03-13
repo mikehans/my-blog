@@ -14,7 +14,7 @@ export default function Footer(props) {
                     {/* or use the contact form here */}
                 </p>
                 <div className={styles.mainFooterContacts}>
-                    {/* <ContactForm /> */}
+                    <ContactForm />
                     <Contact {...props} />
                 </div>
                 <p>
