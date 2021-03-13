@@ -13,7 +13,7 @@ export default function ContentSectionList() {
             <ContentSection 
                 styleNumber="2" 
                 heading="Read my tech blog"
-                intro="I blog about JavaScript, ReactJS, dotNET and Microsoft 365."
+                intro="I blog mostly about JavaScript, ReactJS, dotNET and Microsoft 365."
                 link='/blog'
                 altFacing 
                 />
