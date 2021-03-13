@@ -11,6 +11,7 @@ export default function Menu() {
                 <li className={styles.navItem}><Link to="/about-me">About Me</Link></li>
                 <li className={styles.navItem}><Link to="/blog">Blog</Link></li>
                 <li className={styles.navItem}><Link to="/site-development">Site Development</Link></li>
+                <li className={styles.navItem}><Link to="/projects">Projects</Link></li>
             </ul>
         </nav>
     )

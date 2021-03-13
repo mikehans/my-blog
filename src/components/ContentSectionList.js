@@ -17,8 +17,17 @@ export default function ContentSectionList() {
                 link='/blog'
                 altFacing 
                 />
-            <ContentSection styleNumber="3" />
-            <ContentSection styleNumber="1" altFacing />
+            <ContentSection 
+                styleNumber="3"
+                heading="Tech projects"
+                intro="Check out what I'm up to with various tech projects."
+                link="/projects" />
+            <ContentSection 
+                styleNumber="1" 
+                heading="Other stuff"
+                intro="Here's where I write about things not tech related. Check out what's happening with my interests here."
+                link="other-interests"
+                altFacing />
         </section>
     )
 }
