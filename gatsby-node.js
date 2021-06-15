@@ -41,6 +41,10 @@ exports.createPages = async ({graphql, actions}) => {
         return node.frontmatter.type === 'project';
     });
 
+    const interests = result.data.allMarkdownRemark.edges.filter(({node}) => {
+        return node.frontmatter.type === 'interests';
+    });
+
     posts.forEach(node => {
         createPage({
             path: node.node.frontmatter.path,
@@ -56,6 +60,13 @@ exports.createPages = async ({graphql, actions}) => {
     });
 
     projects.forEach(node => {
+        createPage({
+            path: node.node.frontmatter.path,
+            component: path.resolve('./src/templates/Project.js')
+        });
+    });
+
+    interests.forEach(node => {
         createPage({
             path: node.node.frontmatter.path,
             component: path.resolve('./src/templates/Project.js')
